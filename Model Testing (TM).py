@@ -126,14 +126,6 @@ while True:
                             while int(time()-result_start_time)<result_seconds:
                                 result = cv2.imread(f'alphabets/{letter}.jpeg')
                                 result = cv2.resize(result,(640,480))
-                                """
-                                icon = cv2.imread(f'alphabets/{letter}.jpeg')
-                                icon = cv2.resize(icon,(310,290))
-                                result = np.ones((480, 640,3), np.uint8) * 255
-                                result[10:300, 320:630] = icon
-                                cv2.putText(result,'New Capture starts in :',(50,300),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,0),1)
-                                cv2.putText(result,f'{result_seconds - int(time() - result_start_time)}',(60, 400), cv2.FONT_HERSHEY_COMPLEX, 4, (0, 0, 0), 1)
-                                """
                                 cv2.imshow('Result',result)
                                 cv2.waitKey(1)
                             sentence = sentence+letter
